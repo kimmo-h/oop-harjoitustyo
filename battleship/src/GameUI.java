@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 /**
- * This class provides methods for visualizing the game and showing dialogs.
+ * This class provides user interface and game visualization.
  */
 public class GameUI {
     Scanner inputScanner;
@@ -15,7 +15,7 @@ public class GameUI {
 
     /**
      * Prints a grid.
-     * @param grid grid to be printed
+     * @param grid two-dimensional array representing a game grid
      */
     public void printGrid(int[][] grid) {
         System.out.print(" ");
@@ -119,7 +119,7 @@ public class GameUI {
      * @return the row to be shot
      */
     public int shootRow(int maxRow) {
-        return dialog("Give row (0-9)", "Out of grid! Try again.",0, maxRow);
+        return dialog("Give row (0-" + maxRow + ")", "Out of grid! Try again.",0, maxRow);
     }
 
     /**
@@ -127,7 +127,7 @@ public class GameUI {
      * @return the column to be shot
      */
     public int shootColumn(int maxColumn) {
-        return dialog("Give column (0-9)", "Out of grid! Try again.",0, maxColumn);
+        return dialog("Give column (0-" + maxColumn + ")", "Out of grid! Try again.",0, maxColumn);
     }
 
     /**
